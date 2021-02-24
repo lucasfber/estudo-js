@@ -3,7 +3,7 @@
  1. O construtor de uma Promise recebe uma `function callback`
  2. Funções/Métodos retornam promises. Ex:  metódos `mongoose: create, find, update` etc.
  3. Metódos/funções de bibliotecas para requisição http (**fetch, axios**), disparam a resolve(resultado) quando a requisição retorna status code `200` ou lançam a reject quando ocorre algum erro (`404, 500, 400`).
- 4. os usuários de tais libs (**fetch(url)**,  **axios.get()**) que retornam Promises, só vão se preocupar com o que deve acontecer no `then()`
+ 4. os usuários de tais libs (**fetch(url)**,  **axios.get()**) que retornam Promises, só vão se preocupar com o que deve acontecer no `then()` ou tratar algum erro no `catch()`
  5. **LEMBRAR QUE**: quando a função `resolve()` é chamada, o `then()` é executado.
  6. **LEMBRAR QUE**: apenas o `resolve()` ou o `reject()` será executado.
  7. O parâmetro passado pra função `resolve(algumDado)` e `reject(Erro("Um erro ocorreu"))` é o que vai ser disponível no `then` (result) e no `catch` (err)
@@ -26,7 +26,7 @@ promise
 ```
 
 ## Exemplo Simulando operações de um DB usando Promises:
-	exemplo-db-promises.js
+	[exemplo-db-promises.js](https://github.com/lucasfber/estudo-js/blob/master/1.Promises/1.exemplo-db-promises.js "Exemplo Database using Promises")
 
 ## LEMBRAR QUE: só faz sentido vc usar Promise se o código for assíncrono
 
