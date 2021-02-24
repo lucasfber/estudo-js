@@ -18,6 +18,14 @@
 		//faz algo
 	 })
 ```
+12. O then aceita tanto a função pra tratar o resutado, como a `reject` pra lidar com o erro:
+```javascript
+	then(() => {
+		// faz algo
+	},(err) => {
+		// trata erro
+	})// then
+```
 
 ## Exemplo Simulando operações de um DB usando Promises:
 [exemplo-db-promises.js](https://github.com/lucasfber/estudo-js/blob/master/1.Promises/1.exemplo-db-promises.js "Exemplo Database using Promises")
