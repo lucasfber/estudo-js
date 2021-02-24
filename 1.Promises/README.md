@@ -1,7 +1,9 @@
 # Promises
 
  1. O construtor de uma Promise recebe uma `function callback`
+
  2. Funções/Métodos retornam promises. Ex:  metódos `mongoose: create, find, update` etc.
+ 
  3. Metódos/funções de bibliotecas para requisição http (**fetch, axios**), disparam a resolve(resultado) quando a requisição retorna status code `200` ou lançam a reject quando ocorre algum erro (`404, 500, 400`).
  4. os usuários de tais libs (**fetch(url)**,  **axios.get()**) que retornam Promises, só vão se preocupar com o que deve acontecer no `then()` ou tratar algum erro no `catch()`
  5. **LEMBRAR QUE**: quando a função `resolve()` é chamada, o `then()` é executado.
@@ -9,7 +11,7 @@
  7. O parâmetro passado pra função `resolve(algumDado)` e `reject(Erro("Um erro ocorreu"))` é o que vai ser disponível no `then` (result) e no `catch` (err)
  8. `PromiseStatus` = `pending, resolved, fulfilled`
 9. `PromiseValue` = o valor passado pro `then`  
-10. O que você retornar no then() é passado como parâmetro pro segundo, terceiro, etc.
+10. O que você retornar no then() é passado como parâmetro pro segundo, terceiro, etc. [Ver exemplo](https://github.com/lucasfber/estudo-js/blob/master/1.Promises/3.exemplo-multiple-then.js)
 11. O `finally` sempre será executado independente da promise ter caído no `then` ou no `catch`
 ```javascript
 	.finally(() => {
