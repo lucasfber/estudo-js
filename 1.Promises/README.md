@@ -26,7 +26,7 @@ promise
 ```
 
 ## Exemplo Simulando operações de um DB usando Promises:
-	[exemplo-db-promises.js](https://github.com/lucasfber/estudo-js/blob/master/1.Promises/1.exemplo-db-promises.js "Exemplo Database using Promises")
+[exemplo-db-promises.js](https://github.com/lucasfber/estudo-js/blob/master/1.Promises/1.exemplo-db-promises.js "Exemplo Database using Promises")
 
 ## LEMBRAR QUE: só faz sentido vc usar Promise se o código for assíncrono
 
