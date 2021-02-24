@@ -3,7 +3,7 @@
  1. O construtor de uma Promise recebe uma `function callback`
 
  2. Funções/Métodos retornam promises. Ex:  metódos `mongoose: create, find, update` etc.
- 
+
  3. Metódos/funções de bibliotecas para requisição http (**fetch, axios**), disparam a resolve(resultado) quando a requisição retorna status code `200` ou lançam a reject quando ocorre algum erro (`404, 500, 400`).
  4. os usuários de tais libs (**fetch(url)**,  **axios.get()**) que retornam Promises, só vão se preocupar com o que deve acontecer no `then()` ou tratar algum erro no `catch()`
  5. **LEMBRAR QUE**: quando a função `resolve()` é chamada, o `then()` é executado.
@@ -17,14 +17,6 @@
 	.finally(() => {
 		//faz algo
 	 })
-```
-
-```javascript
-promise
-	.then(result => result.json())
-	.then(data => {
-		console.log(data);	
-	})
 ```
 
 ## Exemplo Simulando operações de um DB usando Promises:
