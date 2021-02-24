@@ -67,7 +67,7 @@ const getData = new Promise((resolve, reject) => {
 
 const promises = Promise.all([login, getDados]);
 promises.then((result) => {
-	//PromiseResult login promise
+	//PromiseResult (2) ["login promise", "getDados promise"]
 	console.log('PromiseResult', result);
 });
 ```
